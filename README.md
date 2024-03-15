@@ -26,7 +26,7 @@ This repository contains the package with common errors for backend services.
 Example:
 
 ```
-git clone https://github.com/diia-open-source/pkg-errors.git
+git clone https://github.com/diia-open-source/be-pkg-errors.git pkg-errors
 ```
 
 ---
