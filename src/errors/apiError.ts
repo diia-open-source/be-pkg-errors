@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/custom-error-definition */
 import { ErrorData, ErrorType } from '../interfaces'
 
 export class ApiError extends Error {
@@ -51,5 +52,11 @@ export class ApiError extends Error {
 
     getType(): ErrorType {
         return this.type
+    }
+
+    setProcessCode(processCode: number): void {
+        this.data ??= {}
+        this.data.processCode = processCode
+        this.code = processCode
     }
 }

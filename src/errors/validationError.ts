@@ -1,8 +1,9 @@
+/* eslint-disable unicorn/custom-error-definition */
 import { HttpStatusCode } from '@diia-inhouse/types'
 
 import { ErrorType } from '../interfaces'
 
-import { ApiError } from './ApiError'
+import { ApiError } from './apiError'
 
 export interface ValidationErrorField {
     type: string

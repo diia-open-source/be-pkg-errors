@@ -2,7 +2,7 @@ import { HttpStatusCode } from '@diia-inhouse/types'
 
 import { ErrorData, ErrorType } from '../interfaces'
 
-import { ApiError } from './ApiError'
+import { ApiError } from './apiError'
 
 export class ExternalCommunicatorError extends ApiError {
     constructor(message: string, code: HttpStatusCode, data?: ErrorData, type?: ErrorType) {
