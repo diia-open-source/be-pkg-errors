@@ -2,7 +2,6 @@
 import { HttpStatusCode } from '@diia-inhouse/types'
 
 import { ErrorData, ErrorType } from '../interfaces'
-
 import { ApiError } from './apiError'
 
 export class UnprocessableEntityError extends ApiError {

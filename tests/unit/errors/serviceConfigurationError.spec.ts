@@ -7,12 +7,13 @@ describe('ServiceConfigurationError', () => {
         const message = 'message'
         const processCode = 1313
         const errorType = ErrorType.Operated
+        const code = HttpStatusCode.INTERNAL_SERVER_ERROR
 
         const res = new ServiceConfigurationError(message, processCode, errorType)
 
         expect(res.getMessage()).toBe(`Configuration error: ${message}`)
-        expect(res.getCode()).toEqual(processCode)
-        expect(res.getData()).toEqual({ processCode, code: HttpStatusCode.INTERNAL_SERVER_ERROR })
+        expect(res.getCode()).toEqual(code)
+        expect(res.getData()).toEqual({ processCode, code })
         expect(res.getType()).toEqual(errorType)
         expect(res.getName()).toBe('Error')
     })

@@ -6,6 +6,5 @@
         "declarationDir": "dist/types",
         "baseUrl": "."
     },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules"]
+    "include": ["src/**/*"]
 }

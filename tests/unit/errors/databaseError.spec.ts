@@ -10,10 +10,11 @@ describe('DatabaseError', () => {
         }
         const processCode = 1313
         const errorType = ErrorType.Operated
+        const code = HttpStatusCode.INTERNAL_SERVER_ERROR
         const res = new DatabaseError(message, data, processCode, errorType)
 
-        expect(res.getCode()).toEqual(processCode)
-        expect(res.getData()).toEqual({ ...data, processCode, code: HttpStatusCode.INTERNAL_SERVER_ERROR })
+        expect(res.getCode()).toEqual(code)
+        expect(res.getData()).toEqual({ ...data, processCode, code })
         expect(res.getMessage()).toEqual(message)
         expect(res.getType()).toEqual(errorType)
     })

@@ -6,12 +6,17 @@ describe('UnprocessableEntityError', () => {
     it('should create error', () => {
         const message = 'message'
         const data = { errorData: 'errorData' }
+        const code = HttpStatusCode.UNPROCESSABLE_ENTITY
         const processCode = 1313
         const errorType = ErrorType.Operated
         const res = new UnprocessableEntityError(message, data, processCode, errorType)
 
-        expect(res.getCode()).toEqual(processCode)
-        expect(res.getData()).toEqual({ ...data, processCode, code: HttpStatusCode.UNPROCESSABLE_ENTITY })
+        expect(res.getCode()).toEqual(code)
+        expect(res.getData()).toEqual({
+            ...data,
+            processCode,
+            code,
+        })
         expect(res.getMessage()).toEqual(message)
         expect(res.getType()).toEqual(errorType)
     })

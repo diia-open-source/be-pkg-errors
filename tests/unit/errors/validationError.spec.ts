@@ -13,12 +13,17 @@ describe('ValidationError', () => {
         ]
         const processCode = 1313
         const errorType = ErrorType.Operated
+        const code = HttpStatusCode.UNPROCESSABLE_ENTITY
 
         const res = new ValidationError(errors, processCode, errorType)
 
         expect(res.getMessage()).toBe('Parameter validation error')
-        expect(res.getCode()).toEqual(processCode)
-        expect(res.getData()).toEqual({ processCode, errors, code: HttpStatusCode.UNPROCESSABLE_ENTITY })
+        expect(res.getCode()).toEqual(code)
+        expect(res.getData()).toEqual({
+            processCode,
+            errors,
+            code,
+        })
         expect(res.getType()).toEqual(errorType)
         expect(res.getName()).toBe('Error')
     })

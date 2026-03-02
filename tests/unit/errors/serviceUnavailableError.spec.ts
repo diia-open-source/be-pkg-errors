@@ -7,12 +7,13 @@ describe('ServiceUnavailableError', () => {
         const message = 'message'
         const processCode = 1313
         const errorType = ErrorType.Operated
+        const code = HttpStatusCode.SERVICE_UNAVAILABLE
 
         const res = new ServiceUnavailableError(message, processCode, errorType)
 
         expect(res.getMessage()).toEqual(message)
-        expect(res.getCode()).toEqual(processCode)
-        expect(res.getData()).toEqual({ processCode, code: HttpStatusCode.SERVICE_UNAVAILABLE })
+        expect(res.getCode()).toEqual(code)
+        expect(res.getData()).toEqual({ processCode, code })
         expect(res.getType()).toEqual(errorType)
         expect(res.getName()).toBe('Error')
     })

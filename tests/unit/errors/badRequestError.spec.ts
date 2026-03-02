@@ -10,10 +10,11 @@ describe('BadRequestError', () => {
         }
         const processCode = 1313
         const errorType = ErrorType.Operated
+        const code = HttpStatusCode.BAD_REQUEST
         const res = new BadRequestError(message, data, processCode, errorType)
 
-        expect(res.getCode()).toEqual(processCode)
-        expect(res.getData()).toEqual({ ...data, processCode, code: HttpStatusCode.BAD_REQUEST })
+        expect(res.getCode()).toEqual(code)
+        expect(res.getData()).toEqual({ ...data, processCode, code })
         expect(res.getMessage()).toEqual(message)
         expect(res.getType()).toEqual(errorType)
     })

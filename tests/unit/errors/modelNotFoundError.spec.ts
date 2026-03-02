@@ -9,12 +9,13 @@ describe('ModelNotFoundError', () => {
         const data = { errorData: 'errorData' }
         const processCode = 1313
         const errorType = ErrorType.Operated
+        const code = HttpStatusCode.NOT_FOUND
 
         const res = new ModelNotFoundError(resource, id, data, processCode, errorType)
 
         expect(res.getMessage()).toBe(`The requested model ${resource} ${id} could not be found.`)
-        expect(res.getCode()).toEqual(processCode)
-        expect(res.getData()).toEqual({ ...data, processCode, code: HttpStatusCode.NOT_FOUND })
+        expect(res.getCode()).toEqual(code)
+        expect(res.getData()).toEqual({ ...data, processCode, code })
         expect(res.getType()).toEqual(errorType)
         expect(res.getName()).toBe('Error')
     })

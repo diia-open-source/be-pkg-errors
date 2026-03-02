@@ -20,7 +20,6 @@ export class ApiError extends Error {
         if (processCode) {
             this.data.processCode = processCode
             this.data.code ??= code
-            this.code = processCode
             this.type = type || ErrorType.Unoperated
         }
 
@@ -54,9 +53,54 @@ export class ApiError extends Error {
         return this.type
     }
 
+    /**
+     * Checks if the error type (ApiError.getType()) is an external error.
+     */
+    isExternal(): boolean {
+        return this.type === ErrorType.External
+    }
+
+    /**
+     * Checks if the original error type (ApiError.getData().opOriginalError?.type) is an external error.
+     */
+    isOriginalExternal(): boolean {
+        return this.data.opOriginalError?.type === ErrorType.External
+    }
+
+    /**
+     * Checks if the error type (ApiError.getType()) is an operated error.
+     */
+    isOperated(): boolean {
+        return this.type === ErrorType.Operated
+    }
+
+    /**
+     * Checks if the original error type (ApiError.getData().opOriginalError?.type) is an operated error.
+     */
+    isOriginalOperated(): boolean {
+        return this.data.opOriginalError?.type === ErrorType.Operated
+    }
+
+    /**
+     * Checks if the error type (ApiError.getType()) is an unoperated error.
+     */
+    isUnoperated(): boolean {
+        return this.type === ErrorType.Unoperated
+    }
+
+    /**
+     * Checks if the original error type (ApiError.getData().opOriginalError?.type) is an unoperated error.
+     */
+    isOriginalUnoperated(): boolean {
+        return this.data.opOriginalError?.type === ErrorType.Unoperated
+    }
+
     setProcessCode(processCode: number): void {
         this.data ??= {}
         this.data.processCode = processCode
-        this.code = processCode
+    }
+
+    getProcessCode(): number | undefined {
+        return this.data.processCode
     }
 }
