@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/errors",
-    "version": "1.18.6",
+    "version": "1.18.7",
     "description": "Custom errors",
     "main": "dist/index.js",
     "types": "dist/types/index.d.ts",
@@ -30,12 +30,12 @@
         "@diia-inhouse/types": ">=2.17.0"
     },
     "dependencies": {
-        "@diia-inhouse/types": "11.5.0"
+        "@diia-inhouse/types": "11.6.0"
     },
     "devDependencies": {
         "@diia-inhouse/configs": "6.1.1",
         "@diia-inhouse/eslint-config": "8.8.0",
-        "@diia-inhouse/test": "7.3.5",
+        "@diia-inhouse/test": "7.3.6",
         "@vitest/coverage-v8": "4.0.18",
         "@vitest/ui": "4.0.18",
         "eslint": "9.29.0",
