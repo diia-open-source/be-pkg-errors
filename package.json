@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/errors",
-    "version": "1.18.13",
+    "version": "1.18.14",
     "description": "Custom errors",
     "main": "dist/index.js",
     "types": "dist/types/index.d.ts",
@@ -30,7 +30,7 @@
         "@diia-inhouse/types": ">=2.17.0"
     },
     "dependencies": {
-        "@diia-inhouse/types": "12.0.0"
+        "@diia-inhouse/types": "12.0.1"
     },
     "devDependencies": {
         "@diia-inhouse/configs": "6.1.1",
