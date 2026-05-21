@@ -1,8 +1,8 @@
 /* eslint-disable unicorn/custom-error-definition */
 import { HttpStatusCode } from '@diia-inhouse/types'
 
-import { ErrorType } from '../interfaces'
-import { ApiError } from './apiError'
+import { ErrorType } from '../interfaces/index.js'
+import { ApiError } from './apiError.js'
 
 /**
  * @deprecated SERVICE_UNAVAILABLE 503 error shouldn't be used in the business logic (API) layer. Use InternalServerError instead

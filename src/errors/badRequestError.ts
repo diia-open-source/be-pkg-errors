@@ -1,8 +1,8 @@
 /* eslint-disable unicorn/custom-error-definition */
 import { HttpStatusCode } from '@diia-inhouse/types'
 
-import { ErrorData, ErrorType } from '../interfaces'
-import { ApiError } from './apiError'
+import { ErrorData, ErrorType } from '../interfaces/index.js'
+import { ApiError } from './apiError.js'
 
 export class BadRequestError extends ApiError {
     constructor(message: string, data?: ErrorData, processCode?: number, type?: ErrorType) {

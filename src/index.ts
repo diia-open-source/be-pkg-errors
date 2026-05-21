@@ -1,3 +1,3 @@
-export * from './interfaces'
+export * from './interfaces/index.js'
 
-export * from './errors'
+export * from './errors/index.js'

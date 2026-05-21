@@ -1,5 +1,5 @@
 /* eslint-disable unicorn/custom-error-definition */
-import { ErrorData, ErrorType } from '../interfaces'
+import { ErrorData, ErrorType } from '../interfaces/index.js'
 
 export class ApiError extends Error {
     private type: ErrorType = ErrorType.Unoperated

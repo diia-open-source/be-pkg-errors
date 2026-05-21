@@ -1,7 +1,7 @@
-export * from './errorCode'
+export * from './errorCode.js'
 
-export * from './errorData'
+export * from './errorData.js'
 
-export * from './errorType'
+export * from './errorType.js'
 
-export * from './opOriginalError'
+export * from './opOriginalError.js'

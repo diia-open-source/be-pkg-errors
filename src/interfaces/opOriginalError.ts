@@ -1,4 +1,4 @@
-import { ErrorType } from './errorType'
+import { ErrorType } from './errorType.js'
 
 export interface OpOriginalError {
     type?: ErrorType

@@ -1,4 +1,4 @@
-import { OpOriginalError } from './opOriginalError'
+import { OpOriginalError } from './opOriginalError.js'
 
 export interface ErrorData {
     [key: string]: unknown
