@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/errors",
-    "version": "2.1.14",
+    "version": "2.1.15",
     "type": "module",
     "description": "Custom errors",
     "main": "dist/index.js",
@@ -38,12 +38,12 @@
         "@diia-inhouse/types": ">=13.1.0"
     },
     "dependencies": {
-        "@diia-inhouse/types": "13.2.4"
+        "@diia-inhouse/types": "13.3.0"
     },
     "devDependencies": {
         "@diia-inhouse/configs": "7.0.1",
         "@diia-inhouse/oxc-config": "1.11.0",
-        "@diia-inhouse/test": "8.2.10",
+        "@diia-inhouse/test": "8.2.11",
         "@vitest/coverage-v8": "4.1.5",
         "@vitest/ui": "4.1.5",
         "lockfile-lint": "5.0.0",
