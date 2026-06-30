@@ -20,6 +20,8 @@ export * from './httpError.js'
 
 export * from './internalServerError.js'
 
+export * from './neverError.js'
+
 export * from './serviceUnavailableError.js'
 
 export * from './documentNotFoundError.js'
