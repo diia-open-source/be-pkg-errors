@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/errors",
-    "version": "2.2.26",
+    "version": "2.2.27",
     "type": "module",
     "description": "Custom errors",
     "main": "dist/index.js",
@@ -42,7 +42,7 @@
     },
     "devDependencies": {
         "@diia-inhouse/configs": "7.2.1",
-        "@diia-inhouse/oxc-config": "2.1.4",
+        "@diia-inhouse/oxc-config": "2.1.6",
         "@diia-inhouse/test": "8.3.14",
         "@vitest/coverage-v8": "4.1.5",
         "@vitest/ui": "4.1.5",
