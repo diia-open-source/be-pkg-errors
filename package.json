@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/errors",
-    "version": "2.2.31",
+    "version": "2.3.0",
     "type": "module",
     "description": "Custom errors",
     "main": "dist/index.js",

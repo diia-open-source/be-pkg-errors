@@ -20,7 +20,6 @@ export class ApiError extends Error {
         if (processCode) {
             this.data.processCode = processCode
             this.data.code ??= code
-            this.type = type || ErrorType.Unoperated
         }
 
         if (!message) {
@@ -49,8 +48,19 @@ export class ApiError extends Error {
         return this.message
     }
 
+    setType(type: ErrorType): void {
+        this.type = type
+    }
+
     getType(): ErrorType {
         return this.type
+    }
+
+    /**
+     * Returns the error type of the original error (ApiError.getData().opOriginalError?.type).
+     */
+    getOriginalType(): ErrorType | undefined {
+        return this.data.opOriginalError?.type
     }
 
     /**

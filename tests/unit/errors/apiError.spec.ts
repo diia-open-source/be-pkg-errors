@@ -64,4 +64,27 @@ describe('ApiError', () => {
         expect(res.getData()).toEqual({ processCode, code, opOriginalError })
         expect(res.getCode()).toEqual(code)
     })
+
+    it('should override error type', () => {
+        const res = new ApiError('', HttpStatusCode.BAD_REQUEST)
+
+        res.setType(ErrorType.Operated)
+
+        expect(res.getType()).toEqual(ErrorType.Operated)
+        expect(res.isOperated()).toBe(true)
+        expect(res.isUnoperated()).toBe(false)
+    })
+
+    it('should return original error type', () => {
+        const opOriginalError = { type: ErrorType.External }
+        const res = new ApiError('', HttpStatusCode.BAD_REQUEST, { opOriginalError })
+
+        expect(res.getOriginalType()).toEqual(ErrorType.External)
+    })
+
+    it('should return undefined original error type when original error is absent', () => {
+        const res = new ApiError('', HttpStatusCode.BAD_REQUEST)
+
+        expect(res.getOriginalType()).toBeUndefined()
+    })
 })
