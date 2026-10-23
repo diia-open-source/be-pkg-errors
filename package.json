@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/errors",
-    "version": "2.3.26",
+    "version": "2.3.27",
     "description": "Custom errors",
     "license": "SEE LICENSE IN LICENSE.md",
     "author": "diia-team",
@@ -32,12 +32,12 @@
         "find-circulars": "madge --circular --extensions ts ./"
     },
     "dependencies": {
-        "@diia-inhouse/types": "14.7.1"
+        "@diia-inhouse/types": "14.7.2"
     },
     "devDependencies": {
         "@diia-inhouse/configs": "7.2.2",
         "@diia-inhouse/oxc-config": "5.0.2",
-        "@diia-inhouse/test": "8.3.42",
+        "@diia-inhouse/test": "8.3.43",
         "@vitest/coverage-v8": "4.1.11",
         "@vitest/ui": "4.1.11",
         "lockfile-lint": "5.0.0",
