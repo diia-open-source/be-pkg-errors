@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/errors",
-    "version": "2.3.33",
+    "version": "2.3.34",
     "description": "Custom errors",
     "license": "SEE LICENSE IN LICENSE.md",
     "author": "diia-team",
@@ -31,12 +31,12 @@
         "test:watch": "vitest watch"
     },
     "dependencies": {
-        "@diia-inhouse/types": "14.9.2"
+        "@diia-inhouse/types": "14.10.0"
     },
     "devDependencies": {
         "@diia-inhouse/configs": "7.2.3",
         "@diia-inhouse/oxc-config": "6.1.1",
-        "@diia-inhouse/test": "8.3.46",
+        "@diia-inhouse/test": "8.4.0",
         "@vitest/coverage-v8": "4.1.11",
         "@vitest/ui": "4.1.11",
         "lockfile-lint": "5.0.0",
